@@ -6,14 +6,14 @@ import css from './styles.module.css'
 import ChainSwitcher from '@/components/common/ChainSwitcher'
 import ConnectWallet from '@/components/common/ConnectWallet'
 import NetworkSelector from '@/components/common/NetworkSelector'
-import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTokenWidget'
+// import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTokenWidget'
 import NotificationCenter from '@/components/notification-center/NotificationCenter'
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
-import SafeLogo from '@/public/logo.svg'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import Track from '../Track'
 import Link from 'next/link'
+import Image from 'next/image'
 
 type HeaderProps = {
   onMenuToggle: () => void
@@ -21,7 +21,7 @@ type HeaderProps = {
 
 const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
   const chainId = useChainId()
-  const showSafeToken = !!getSafeTokenAddress(chainId)
+  // const showSafeToken = !!getSafeTokenAddress(chainId)
 
   return (
     <Paper className={css.container}>
@@ -35,7 +35,7 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
         <Track {...OVERVIEW_EVENTS.HOME}>
           <Link href={AppRoutes.index} passHref>
             <a>
-              <SafeLogo alt="Safe Logo" height={29} />
+              <Image src="/logotype.png" alt="Moon Safe Logo" height={29} width={104.55} />
             </a>
           </Link>
         </Track>
@@ -45,11 +45,11 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
         <ChainSwitcher />
       </div>
 
-      {showSafeToken && (
+      {/* {showSafeToken && (
         <div className={classnames(css.element, css.hideMobile)}>
           <SafeTokenWidget />
         </div>
-      )}
+      )} */}
 
       <div className={classnames(css.element, css.hideMobile)}>
         <NotificationCenter />
