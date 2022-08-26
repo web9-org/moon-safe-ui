@@ -10,10 +10,10 @@ const NewSafe = () => {
   return (
     <>
       <Typography variant="h1" mb={2}>
-        Welcome to the Safe.
+        Welcome to MoonSafe.
       </Typography>
       <Typography variant="h4" mb={2}>
-        Safe is the most trusted platform to manage digital assets.
+        MoonSafe is the easiest trusted multi-sig platform.
         <br />
         Here is how to get started:
       </Typography>

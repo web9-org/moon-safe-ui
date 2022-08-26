@@ -42,7 +42,7 @@ export const createOnboard = (chainConfigs: ChainInfo[]): OnboardAPI => {
 
     appMetadata: {
       name: 'Safe',
-      icon: '/logo-no-text.svg',
+      icon: '/logo.png',
       description: 'Please select a wallet to connect to Safe',
       recommendedInjectedWallets: getRecommendedInjectedWallets(),
     },
